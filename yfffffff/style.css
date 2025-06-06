@@ -1,0 +1,198 @@
+body {
+  margin: 0;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#bg-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  object-fit: cover;
+  object-position: center top;
+  z-index: -1;
+}
+
+#container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+#game {
+  width: 660px;
+  height: 660px;
+  display: grid;
+  grid-template-columns: repeat(12, 55px);
+  grid-template-rows: repeat(12, 55px);
+  gap: 0;
+  background-image: url('furyparavozik.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.cell {
+  width: 55px;
+  height: 55px;
+  background-color: transparent;
+  border: none;
+}
+
+.snake {
+  background-size: cover;
+}
+
+.food {
+  background-image: url('pervivparavozike.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+#sidebar {
+  width: 200px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+}
+
+#sidebar button {
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #ff4e50, #f9d423);
+  color: white;
+  font-weight: bold;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#sidebar button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 78, 80, 0.9);
+}
+
+#sidebar button:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 10px rgba(255, 78, 80, 0.4);
+}
+
+#difficulty-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 5px;
+}
+
+.difficulty-btn {
+  flex: 1;
+  font-size: 14px;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: none;
+  background: #444;
+  color: white;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.difficulty-btn:hover {
+  background: #666;
+}
+
+.difficulty-btn:active {
+  background: #222;
+}
+
+#start-game {
+  background: linear-gradient(45deg, #ff4e50, #f9d423);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 18px 40px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 78, 80, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  outline: none;
+}
+
+#start-game:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 78, 80, 0.9);
+}
+
+#start-game:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 10px rgba(255, 78, 80, 0.4);
+}
+#retry-game {
+  background: linear-gradient(45deg, #ff4e50, #f9d423);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 18px 40px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(255, 78, 80, 0.6);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  user-select: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  outline: none;
+  margin-top: 20px;
+}
+
+#retry-game:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 78, 80, 0.9);
+}
+
+#retry-game:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 10px rgba(255, 78, 80, 0.4);
+}
+
+#game.sosynok-mode {
+  border: 3px solid hotpink;
+  box-shadow: 0 0 15px hotpink;
+}
+
+#game.sosynok-mode .snake {
+  filter: hue-rotate(90deg) saturate(1.5);
+  background-image: url('fyriplace.jpg') !important;
+}
+
+#game.sosynok-mode .food {
+  filter: brightness(1.2);
+  background-image: url('charon.jpg') !important;
+}
+#game.sosynok-mode {
+  background-image: url('fyriplace.jpg'); 
+  background-size: cover;
+  background-position: center;
+}
+body.sosynok-mode {
+  background-image: url('tf2-honest.mp4');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
