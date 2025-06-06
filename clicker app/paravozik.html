@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>паравозик</title>
+</head>
+<body>
+    <H1>ТЫ ДОИГРАЛСЯ ФУРИЛЛА ЕБАНЫЙ ПАРАВОЗИК ОТПРАВЛЯЕТЬСЯ</H1>
+    <video autoplay muted loop id="backgroundVideo">
+        <source src="paravozikcore.mp4" type="video/mp4">
+     </video>
+     <style>
+        #backgroundVideo {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+    }
+    h1{
+        text-align: center;
+        color: aliceblue;
+    }
+    </style>
+    <audio id="backgroundMusic" loop>
+        <source src="MGE.mp3.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const music = document.getElementById("backgroundMusic");
+        music.volume = 0.7;
+        music.play().catch(error => console.log("Браузер хуйня переделывай"));
+    });
+    </script>
+</body>
+</html>
